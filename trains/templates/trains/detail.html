@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}City{% endblock %}
+{% block content %}
+<h1>City</h1>
+<div class="row">
+    <div class="col-md">
+        <table class = "table table-success table-striped">
+            <tr>
+                <th>Number</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Time in travel</th>
+            </tr>
+            <tr>
+                <td>
+                {{object.name}}
+                </td>
+                <td>{{object.from_city}}</td>
+                <td>{{object.to_city}}</td>
+                <td>{{object.travel_time}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <a href="{% url 'trains:home' %}">
+            <button type="button" class="btn btn-light">Back to all trains</button>
+        </a>
+    </div>
+</div>
+{% endblock %}

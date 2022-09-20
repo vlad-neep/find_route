@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% block title %}Find your route{% endblock %}
 {% block content %}
-<h1>Privet {{a}}</h1>
+<h1>Find your route</h1>
+{% url 'find_routes' as action %}
+{% include 'form.html' with button='Find' action=action %}
+
 {% endblock %}
